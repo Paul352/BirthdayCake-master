@@ -45,6 +45,13 @@
             android:layout_height="wrap_content"
             android:text="HOORAY!!" />
 
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Frosting" />
+
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
@@ -52,4 +59,5 @@
             android:text="yay..." />
 
     </LinearLayout>
+
 </LinearLayout>
