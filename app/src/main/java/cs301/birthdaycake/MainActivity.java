@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SeekBar;
+import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +20,20 @@ public class MainActivity extends AppCompatActivity {
         CakeView theCake = findViewById(R.id.cakeview);
         CakeController theController = new CakeController(theCake);
 
+        Button blowOut = findViewById(R.id.blowOutButton);
+        blowOut.setOnClickListener(theController);
+
+        Switch toggleCandles = findViewById(R.id.candlesSwitch);
+        toggleCandles.setOnCheckedChangeListener(theController);
+
+        Switch frostingSwitch = findViewById(R.id.frostingSwitch);
+        frostingSwitch.setOnCheckedChangeListener(theController);
+
+        SeekBar numCandles = findViewById(R.id.numCandles);
+        numCandles.setOnSeekBarChangeListener(theController);
+
     }
+
         public void goodbye(View button){
             Log.i("button", "Goodbye");
             finishAffinity();

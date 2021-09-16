@@ -12,6 +12,4 @@ public class CakeModel {
         hasFrosting = true;
         hasCandles = true;
     }
-
-
 }
