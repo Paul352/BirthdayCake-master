@@ -36,6 +36,7 @@ public class CakeView extends SurfaceView {
 
     private CakeModel cakeViewModel;
 
+
     /**
      * ctor must be overridden here as per standard Java inheritance practice.  We need it
      * anyway to initialize the member variables
