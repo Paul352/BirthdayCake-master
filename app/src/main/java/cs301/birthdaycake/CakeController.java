@@ -29,7 +29,7 @@ public class CakeController implements View.OnClickListener, CompoundButton.OnCh
             v.setText("Re-Light");
         }
         else{
-            v.setText("Blow Out");
+            v.setText("Extinguish");
         }
 
     }
