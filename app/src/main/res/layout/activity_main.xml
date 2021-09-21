@@ -102,10 +102,10 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/blowOutButton"
+                android:id="@+id/Extinguish"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/blow_out"
+                android:text="@string/extinguish"
                 android:textSize="14sp" />
 
             <Button
