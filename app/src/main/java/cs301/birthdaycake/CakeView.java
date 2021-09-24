@@ -5,9 +5,12 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.SurfaceView;
+import android.view.View;
 
-public class CakeView extends SurfaceView {
+public class CakeView extends SurfaceView{
 
     /* These are the paints we'll use to draw the birthday cake below */
     Paint cakePaint = new Paint();
@@ -36,6 +39,8 @@ public class CakeView extends SurfaceView {
 
     private CakeModel cakeViewModel;
 
+    Paint green = new Paint();
+    Paint red = new Paint();
 
     /**
      * ctor must be overridden here as per standard Java inheritance practice.  We need it
@@ -62,6 +67,12 @@ public class CakeView extends SurfaceView {
         innerFlamePaint.setStyle(Paint.Style.FILL);
         wickPaint.setColor(Color.BLACK);
         wickPaint.setStyle(Paint.Style.FILL);
+        green.setColor(Color.GREEN);
+        red.setColor(Color.RED);
+
+
+        //checkered board
+
 
         setBackgroundColor(Color.WHITE);  //better than black default
     }
@@ -145,11 +156,30 @@ public class CakeView extends SurfaceView {
         for (int i = 1; i <= cakeViewModel.numCandles; i++){
             drawCandle(canvas, cakeLeft + i*cakeWidth/(cakeViewModel.numCandles + 1) - candleWidth/2, cakeTop);
         }
+
+        if(cakeViewModel.x != -1 && cakeViewModel.y != -1) {
+
+            //bottom left
+            canvas.drawRect(cakeViewModel.x - 100, cakeViewModel.y + 100,
+                    cakeViewModel.x , cakeViewModel.y, red);
+            //bottom right
+            canvas.drawRect(cakeViewModel.x, cakeViewModel.y + 100,
+                    cakeViewModel.x + 100, cakeViewModel.y, green);
+            //top left
+            canvas.drawRect(cakeViewModel.x - 100, cakeViewModel.y,
+                    cakeViewModel.x, cakeViewModel.y - 100, green);
+            //top right
+            canvas.drawRect(cakeViewModel.x + 100, cakeViewModel.y,
+                    cakeViewModel.x , cakeViewModel.y - 100, red);
+        }
     }//onDraw
 
     public CakeModel getCakeModel(){
         return cakeViewModel;
     }
+
+
+
 
 }//class CakeView
 

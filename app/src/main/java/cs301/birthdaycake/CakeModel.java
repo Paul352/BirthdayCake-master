@@ -5,6 +5,8 @@ public class CakeModel {
     int numCandles;
     boolean hasFrosting;
     boolean hasCandles;
+    float x = -1;
+    float y = -1;
 
     public CakeModel(){
         candlesLit = true;

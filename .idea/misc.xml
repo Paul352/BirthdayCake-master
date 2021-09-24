@@ -3,8 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/David/Documents/GitHub/BirthdayCake-masterpaul/app/src/main/res/layout/activity_main.xml" value="0.15653495440729484" />
         <entry key="..\:/Users/paulk/AndroidStudioProjects/BirthdayCake-master/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.14361702127659576" />
       </map>
     </option>
   </component>
@@ -14,12 +14,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="SuppressABINotification">
-    <option name="modulesWithSuppressedNotConfigured">
-      <set>
-        <option value="BirthdayCake-master.app" />
-      </set>
-    </option>
   </component>
 </project>
