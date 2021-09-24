@@ -20,6 +20,7 @@ public class CakeView extends SurfaceView {
     Paint outerFlamePaint = new Paint();
     Paint innerFlamePaint = new Paint();
     Paint wickPaint = new Paint();
+    Paint textPaint = new Paint();
 
     //balloon
     //float x;
@@ -74,6 +75,10 @@ public class CakeView extends SurfaceView {
         innerFlamePaint.setStyle(Paint.Style.FILL);
         wickPaint.setColor(Color.BLACK);
         wickPaint.setStyle(Paint.Style.FILL);
+
+        textPaint.setColor(Color.RED);
+        textPaint.setTextSize(78);
+
         // Balloon
         baloonPaint.setColor(Color.BLUE);
         stickPaint.setColor(Color.GRAY);
@@ -163,9 +168,12 @@ public class CakeView extends SurfaceView {
             //Then a second cake layer
             canvas.drawRect(cakeLeft, top, cakeLeft + cakeWidth, bottom, cakePaint);
         }
+
+
         for (int i = 1; i <= cakeViewModel.numCandles; i++){
             drawCandle(canvas, cakeLeft + i*cakeWidth/(cakeViewModel.numCandles + 1) - candleWidth/2, cakeTop);
         }
+
         //Draw balloon
         RectF stick = new RectF(cakeViewModel.x-10,cakeViewModel.y,cakeViewModel.x+10,cakeViewModel.y+300);
         RectF oval = new RectF(cakeViewModel.x-50,cakeViewModel.y-100,cakeViewModel.x+50,cakeViewModel.y+100);
@@ -173,7 +181,7 @@ public class CakeView extends SurfaceView {
         {
             canvas.drawRect(stick,stickPaint);
             canvas.drawOval(oval,baloonPaint);
-
+            canvas.drawText(cakeViewModel.x + ", " + cakeViewModel.y, 1476.f, 709.f, textPaint);
 
         }
 
