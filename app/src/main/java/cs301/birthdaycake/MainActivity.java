@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         CakeView theCake = findViewById(R.id.cakeview);
         CakeController theController = new CakeController(theCake);
+        theCake.setOnTouchListener(theController);
 
         Button Extinguish = findViewById(R.id.Extinguish);
         Extinguish.setOnClickListener(theController);
